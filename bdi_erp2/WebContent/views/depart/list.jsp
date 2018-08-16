@@ -33,11 +33,11 @@
 		}
 	%>
 	<form>
-		나이 : <input type="text" name="age"><br> 이름 : <input
-			type="text" name="name"><br> 취미 : 영화<input
-			type="checkbox" name="hobby" value="영화">, 음악감상<input
-			type="checkbox" name="hobby" value="음악감상">, 게임<input
-			type="checkbox" name="hobby" value="게임"><br>
+		나이 : <input type="text" name="age"><br>
+		이름 : <input type="text" name="name"><br>
+		취미 : 영화<input type="checkbox" name="hobby" value="영화">,
+		           음악감상<input type="checkbox" name="hobby" value="음악감상">,
+		           게임<input type="checkbox" name="hobby" value="게임"><br>
 		<button>전송</button>
 	</form>
 </body>
