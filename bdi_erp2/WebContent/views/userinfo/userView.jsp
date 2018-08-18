@@ -6,7 +6,7 @@
     pageEncoding="UTF-8"%>
 <%@ include file="/views/common/common.jsp"%>
 <style>
-	tr,th{text-align:center;}
+	th{text-align:center;}
 	th{background-color:#EEE;}
 </style>
 <body>
@@ -67,14 +67,20 @@ if(rs.next()){
 			<tr>
 				<td colspan="2" align="center">
 					<button>수정</button><!-- 아무것도 없는 버튼은 전송버튼이 됨. -->
-					<button>삭제</button>
+					<button type="button" onclick="deleteUser()">삭제</button>
 				</td>
 			</tr>
 		</table>
 	</fieldset>
+	<input type="hidden" name="uiNo" value="<%=uiNo%>">
 </form>
 </div>
 <script>
+	function deleteUser(){
+		if(confirm("삭제하시겠습니까?")){
+			location.href="<%=rPath%>/views/userinfo/userDeleteOK.jsp?uiNo=<%=uiNo%>";
+		}
+	}
 	function checkVal(){
 		var objs = document.querySelectorAll('input');
 		for(var i=0;i<objs.length;i++){
