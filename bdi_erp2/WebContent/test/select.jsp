@@ -17,11 +17,20 @@
 }
 </style>
 <body>
+<%
+String url = request.getParameter("page");
+if(url==null){
+	url = "r1.jsp";
+}
+url = "/test/" + url;
+%>
 	<div class="container">
 		<div class="left">
-			<jsp:include page="/test/left.jsp" />	
+			<jsp:include page="/test/left.jsp" />
 		</div>
-		<div class="right">RIGHT</div>
+		<div class="right">
+			<jsp:include page="<%=url%>" />
+		</div>
 	</div>
 </body>
 </html>
