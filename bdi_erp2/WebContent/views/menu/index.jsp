@@ -11,6 +11,8 @@
 		if (menu.equals("list")) {
 			if (smenu.equals("userList")) {
 				rightUrl += "/userinfo/userList.jsp";
+			}else if(smenu.equals("testList")){
+				rightUrl += "/test/testusList.jsp";
 			}
 		}
 	}
